@@ -1,7 +1,14 @@
 {
     "$schema":"https://on.cypress.io/cypress.schema.json",
-    "defaultCommandTimeout": 6000,
+    "defaultCommandTimeout": 7000,
     "env": {
         "url":"http://computer-database.gatling.io/computers"
-    }
+    },
+    "reporter": "cypress-multi-reporters",
+    "reporterOptions": {
+    "reportDir": "cypress/results",
+    "overwrite": true,
+    "html": true,
+    "json": true
+  }
 }

@@ -1,0 +1,5 @@
+image: cypress/base:10
+cypress-e2e:
+  script:
+    - npm install
+    - $(npm bin)/cypress run --headless -b chrome --spec  "cypress/integration/tests/google.spec.js" --reporter mochawesome   --reporter-options reportDir=reporter-config.json,overwrite=false,html=true,json=true
